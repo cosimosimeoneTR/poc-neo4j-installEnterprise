@@ -2,6 +2,7 @@ wget -O neo4j-enterprise-2.3.0-unix.tar.gz  http://neo4j.com/artifact.php?name=n
 tar -xvzf neo4j-enterprise-2.3.0-unix.tar.gz                                                                          && \
 cd neo4j-enterprise-2.3.0                                                                                             && \
 echo "Please check all ok... Sleeping 30 seconds and then installing..."                                              && \
+echo "NOTE that conf and data directory will NOT be overwritten"                                                      && \
 sleep 30                                                                                                              && \
 sudo rm -rf /var/lib/neo4j/bin        && sudo mv bin/ /var/lib/neo4j/             && sudo chown -R neo4j:adm /var/lib/neo4j/bin  && \
 sudo rm -rf /usr/share/neo4j/lib      && sudo mv lib/ /usr/share/neo4j/           && sudo chown -R neo4j:adm /usr/share/neo4j    && \
