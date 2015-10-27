@@ -16,7 +16,7 @@ sudo rm -rf /usr/share/neo4j/lib      && sudo mv lib/ /usr/share/neo4j/         
 sudo rm -rf /usr/share/neo4j/plugins  && sudo mv plugins/ /usr/share/neo4j/       && sudo chown -R neo4j:adm /usr/share/neo4j/   && \
 sudo rm -rf /usr/share/neo4j/system   && sudo mv system/ /usr/share/neo4j/        && sudo chown -R neo4j:adm /usr/share/neo4j/   && \
 sudo rm -rf /var/lib/neo4j/data/*                                                                                                && \
-sudo ln -s  /var/log/neo4j/ /var/lib/neo4j/data/log                                                                              && \
+sudo ln -s  /var/log/neo4j/ /var/lib/neo4j/data/log &&  sudo chown -R neo4j:adm /var/lib/neo4j/data/log                          && \
 #echo && echo "Please check all ok... Sleeping 30 seconds and then restaring neo4j server..."   && \
 #sleep 30                                                                               && \
 #echo && echo "Restaring neo4j server..."                                               && \
