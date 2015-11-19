@@ -2,11 +2,12 @@ cd /tmp
 
 
 
+rm -rf neo4j-enterprise-2.3.1                                                                                         && \
 tar -xvzf neo4j-enterprise-2.3.1-unix.tar.gz                                                                          && \
 cd neo4j-enterprise-2.3.1                                                                                             && \
 echo && echo "Please check all ok... Sleeping 30 seconds and then installing..."                                      && \
 echo "NOTE that conf directory will NOT be overwritten, but data will be moved in .OLD"                               && \
-sleep 3                                                                                                              && \
+sleep 30                                                                                                              && \
 echo && echo "Stopping neo4j server and copying new files..."                                                         && \
 sudo service neo4j stop                                                                                               && \
 echo "Backup installation in /var/lib/neo4j.OLD and /usr/share/neo4j.OLD !"                                           && \
